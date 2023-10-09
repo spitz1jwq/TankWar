@@ -24,7 +24,7 @@ bypass-tun = 10.0.0.0/8,127.0.0.0/8,169.254.0.0/16,192.0.2.0/24,192.168.0.0/16,1
 real-ip = *.iCloud.com,*.apple.com
 
 # DNS 服务器
-dns-server = 8.8.8.8,223.5.5.5,119.29.29.29,114.114.114.114
+dns-server = 8.8.8.8,223.5.5.5,119.29.29.29
 # DOH 
 doh-server = https://dns.alidns.com/dns-query
 
@@ -94,9 +94,9 @@ cn.king360.eu.org = VLESS,cn.king360.eu.org,443,"30fa3c56-0ef2-4022-a098-52e5b4f
 手动选择 = select,手动筛选,直接连接,img-url = https://raw.githubusercontent.com/Orz-3/face/master/Static.png
 
 
-谷歌服务 = url-test,yx.piaosir.link,cn.king360.eu.org,443.cf.bestl.de,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Orz-3/face/master/YouTube.png
+谷歌服务 = url-test,yx.piaosir.link,cn.king360.eu.org,443.cf.bestl.de,name.mutex.love,name.mutex.love-clone,loon.mutex.love-clone,cfip.gay,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Orz-3/face/master/YouTube.png
 
-网飞视频 = url-test,yx.piaosir.link,cn.king360.eu.org,443.cf.bestl.de,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Orz-3/face/master/Netflix.png
+网飞视频 = url-test,yx.piaosir.link,cn.king360.eu.org,443.cf.bestl.de,name.mutex.love,name.mutex.love-clone,loon.mutex.love-clone,cfip.gay,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Orz-3/face/master/Netflix.png
 
 电报吹水 = load-balance,yx.piaosir.link,cn.king360.eu.org,443.cf.bestl.de,url = http://www.gstatic.com/generate_204,interval = 600,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Orz-3/face/master/Telegram.png
 
