@@ -1,0 +1,229 @@
+# Loon 精简配置-中文策略组 by @HoCoo
+# 插件脚本整理⭐️https://t.me/ibilibili
+# 基础教学视频⭐️https://youtu.be/_MJG4xfWEas
+# 官方交流群组⭐️https://t.me/Loon0x00
+# 官方通知频道⭐️https://t.me/LoonNews
+# 配置文件只是一个模版，只需拉取一次即可，后续根据自己需要自行调整。
+# 新手多利用搜索引擎、YouTube、GitHub等学习。
+
+
+[General]
+mitm-on-wifi-access = true
+
+# IPv6
+ipv6 = true
+
+# udp
+allow-udp-proxy = true
+
+# 跳过某个域名或者IP段
+skip-proxy = 10.0.0.0/8,127.0.0.0/8,169.254.0.0/16,192.0.2.0/24,192.168.0.0/16,198.51.100.0/24,224.0.0.0/4,*.local,localhost
+bypass-tun = 10.0.0.0/8,127.0.0.0/8,169.254.0.0/16,192.0.2.0/24,192.168.0.0/16,198.51.100.0/24,224.0.0.0/4
+
+# Real-Ip
+real-ip = *.iCloud.com,*.apple.com
+
+# DNS 服务器
+dns-server = 8.8.8.8,223.5.5.5,119.29.29.29,114.114.114.114
+# DOH 
+doh-server = https://dns.alidns.com/dns-query
+
+# Wi-Fi 访问
+allow-wifi-access = true
+wifi-access-http-port = 7222
+wifi-access-socks5-port = 7221
+
+# 代理测速 URL
+proxy-test-url = http://www.gstatic.com/generate_204
+# > 测速超时 (s)
+test-timeout = 3
+
+# 网络接口模式
+interface-mode = auto
+
+# 节点连续失败几次后进行节点切换
+switch-node-after-failure-times = 3
+
+# 丢弃 STUN
+disable-stun = true
+
+# 解析器
+resource-parser = https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/dist/sub-store-parser.loon.min.js
+
+[Host]
+
+host = 127.0.0.1
+
+# 切换至路由器 DNS 服务 （修改下方 LEDE 为自己 Wi-Fi ID）
+ssid:LEDE = server:system
+
+# 订阅节点
+[Remote Proxy]
+苏打 = https://sub.maoxiongnet.com/sub?target=loon&url=https%3A%2F%2Fsubbs.susuda.sslcdnapp.net%2Flink%2FQ9Q5iKPPz3xMH5w3%3Fsub%3D3%26insert%3Dfalse&insert=false,udp=true,fast-open=false,vmess-aead=true,enabled=false,img-url=sun.haze.fill
+suda = https://subbs.susuda.sslcdnapp.net/link/5Z7C99xbmbzLQgkY?list=shadowrocket,udp=true,fast-open=false,vmess-aead=true,enabled=false
+
+# 节点筛选
+[Remote Filter]
+
+订阅节点 = NameRegex, FilterKey = "^(?!.*(流量|测试|使用|更新|游戏)).*$"
+手动筛选 = NameRegex, FilterKey = "(.*)"
+香港节点 = NameRegex, FilterKey = "香港|HK|HongKong"
+台湾节点 = NameRegex, FilterKey = "台湾|TW|Tai"
+日本节点 = NameRegex, FilterKey = "日本|JP|Japan"
+美国节点 = NameRegex, FilterKey = "美国|US|United States"
+狮城节点 = NameRegex, FilterKey = "新加坡|狮城|SG|Singapore"
+网飞节点 = NameRegex, FilterKey = "网飞|奈飞|解锁|NF|Netflix"
+
+# 本地节点
+[Proxy]
+cfip.gay = VLESS,cfip.gay,8443,"30fa3c56-0ef2-4022-a098-52e5b4f6d77c",transport=ws,path=/?ed=2048,host=loon.mutex.love,udp=true,over-tls=true,tls-name=loon.mutex.love
+loon.mutex.love-clone = VLESS,cn.king360.eu.org,8443,"30fa3c56-0ef2-4022-a098-52e5b4f6d77c",transport=ws,path=/?ed=2048,host=loon.mutex.love,udp=true,over-tls=true,tls-name=loon.mutex.love
+name.mutex.love-clone = VLESS,10086.king360.eu.org,443,"485d658b-da71-481f-96df-aa85e273ab55",transport=ws,path=/?ed=2048,host=name.mutex.love,udp=true,over-tls=true,tls-name=name.mutex.love
+name.mutex.love = VLESS,cn.king360.eu.org,443,"485d658b-da71-481f-96df-aa85e273ab55",transport=ws,path=/?ed=2048,host=name.mutex.love,udp=true,over-tls=true,tls-name=name.mutex.love
+yx.piaosir.link = VLESS,yx.piaosir.link,443,"30fa3c56-0ef2-4022-a098-52e5b4f6d77c",transport=ws,path=/?ed=2048,host=loon.mutex.love,udp=true,over-tls=true,tls-name=loon.mutex.love
+cn.king360.eu.org = VLESS,cn.king360.eu.org,443,"30fa3c56-0ef2-4022-a098-52e5b4f6d77c",transport=ws,path=/?ed=2048,host=loon.mutex.love,udp=true,over-tls=true,tls-name=loon.mutex.love
+443.cf.bestl.de = VLESS,443.cf.bestl.de,443,"30fa3c56-0ef2-4022-a098-52e5b4f6d77c",transport=ws,path=/?ed=2048,host=loon.mutex.love,udp=true,over-tls=true,tls-name=loon.mutex.love
+
+# 策略组
+[Proxy Group]
+
+节点选择 = select,自动测速,手动选择,直接连接,img-url = https://raw.githubusercontent.com/Orz-3/face/master/Global.png
+
+自动测速 = url-test,订阅节点,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Orz-3/face/master/Auto.png
+
+手动选择 = select,手动筛选,直接连接,img-url = https://raw.githubusercontent.com/Orz-3/face/master/Static.png
+
+
+谷歌服务 = url-test,yx.piaosir.link,cn.king360.eu.org,443.cf.bestl.de,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Orz-3/face/master/YouTube.png
+
+网飞视频 = url-test,yx.piaosir.link,cn.king360.eu.org,443.cf.bestl.de,url = http://www.gstatic.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Orz-3/face/master/Netflix.png
+
+电报吹水 = load-balance,yx.piaosir.link,cn.king360.eu.org,443.cf.bestl.de,url = http://www.gstatic.com/generate_204,interval = 600,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Orz-3/face/master/Telegram.png
+
+网速测试 = select,直接连接,节点选择,手动选择,img-url = https://raw.githubusercontent.com/Orz-3/face/master/Piao.png
+
+
+
+直接连接 = url-test,DIRECT,url = http://www.baidu.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Orz-3/face/master/CN.png
+
+苹果更新 = select,REJECT,img-url = https://ghproxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_Update.png
+
+# 本地规则
+[Rule]
+DOMAIN,e-hentai.org,自动测速
+DOMAIN,e-hentai.org,自动测速
+DOMAIN-SUFFIX,login.mutex.love,DIRECT
+
+# > GeoIP China
+GEOIP,CN,直接连接
+FINAL,自动测速
+
+
+
+# 屏蔽系统更新
+DOMAIN,ns.itunes.apple.com,苹果更新
+DOMAIN,appldnld.apple.com,苹果更新
+DOMAIN,mesu.apple.com,苹果更新
+DOMAIN,xp.apple.com,苹果更新
+DOMAIN,gdmf.apple.com,苹果更新
+
+
+# 订阅规则
+[Remote Rule]
+
+# > Emby
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Ruleset/Emby/Emby.list, policy=DIRECT, tag=Emby, enabled=false
+
+# > YouTube
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTube/YouTube.list, policy=谷歌服务, tag=YouTube, enabled=true
+
+# > Netflix
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Netflix/Netflix.list, policy=网飞视频, tag=Netflix, enabled=true
+
+# > Telegram
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Telegram/Telegram.list, policy=电报吹水, tag=Telegram, enabled=true
+
+# > Speedtest
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Speedtest/Speedtest.list, policy=网速测试, tag=Speedtest, enabled=true
+
+# > China
+https://raw.githubusercontent.com/HoCooo/Loon/main/ChinaASN.list, policy=直接连接, tag=ASN, enabled=true
+
+# > Proxy
+# https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Proxy/Proxy.list, policy=节点选择, tag=Proxy, enabled=true
+
+# > Tiktok 
+
+# > 本地局域网
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Lan/Lan.list, policy=直接连接, tag=Lan, enabled=true
+
+# 本地重写
+[URL Rewrite]
+
+# 订阅重写
+[Remote Rewrite]
+
+# 插件
+[Plugin]
+https://raw.githubusercontent.com/chxm1023/Script_X/main/Collections.plugin, enabled=true
+https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, policy=DIRECT, tag=BoxJs, enabled=false
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Script-Hub.plugin, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/AllInOne/AllInOne.plugin, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/skip-proxy.plugin, enabled=true
+https://raw.githubusercontent.com/VirgilClyne/iRingo/main/plugin/Siri.plugin, enabled=true
+https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/Loon/Plugin/Qsearch.plugin, enabled=true
+https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/aDriveCheckIn/aDriveCheckIn.plugin, enabled=false
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Node_detection_tool.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/YouTube_remove_ads.plugin, enabled=false
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/JD_Price.plugin, enabled=false
+https://ghproxy.com/https://raw.githubusercontent.com/spitz1jwq/TankWar/master/SpotifyPremium.plugin, tag=spotify, enabled=true
+https://raw.githubusercontent.com/deezertidal/private/master/plugallery/tpp.plugin, enabled=false
+https://raw.githubusercontent.com/deezertidal/private/master/plugallery/colorweather.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/BoxJS.plugin, enabled=false
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin, enabled=false
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin, enabled=false
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Remove_splash_screen_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/Zhihu_remove_ads.plugin, enabled=true
+https://raw.githubusercontent.com/GeQ1an/Rules/master/Loon/Rewrite/Rewrite.plugin, enabled=true
+https://raw.githubusercontent.com/deezertidal/private/master/plugallery/gddt.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/LoonGallery.plugin, policy=yxpiao.mutex.love, enabled=true
+
+# > 哔哩哔哩签到
+
+# > 网易云音乐签到
+
+# > 京东价格返利
+
+# > 节点流媒体可用性查询
+
+# > 解锁部分Spotify功能
+
+# > 贴吧去广告
+
+# > 策略组节点自动切换
+
+# > 重定向
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/Redirect/Redirect.plugin, tag=重定向, enabled=true
+
+# > EmbyPremiere
+
+# > 开屏广告
+
+# > 知乎助手
+
+# > 广告
+
+# > 哔哩哔哩去广告
+
+# 本地脚本
+[Script]
+
+# 远程脚本 
+[Remote Script]
+
+[MITM]
+ca-p12 = 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
+ca-passphrase = UK4H2X4P
+# 默认 = 启用
+hostname =
+skip-server-cert-verify = true
