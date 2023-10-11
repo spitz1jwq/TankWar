@@ -23,7 +23,7 @@ address=/raw.githubusercontent.com/185.199.110.133
 
 [policy]
 static=🛑 广告拦截, REJECT, PROXY, DIRECT, img-url=https://raw.githubusercontent.com/limbopro/Qure/master/IconSet/Advertising.png
-available=♻️ 故障切换, img-url=https://raw.githubusercontent.com/limbopro/Zure/master/IconSet/Available.png
+available=♻️ 故障切换,PROXY, img-url=https://raw.githubusercontent.com/limbopro/Zure/master/IconSet/Available.png
 static=✈️ 机场专线, PROXY, DIRECT, ♻️ 故障切换, img-url=https://raw.githubusercontent.com/limbopro/Zure/master/IconSet/rocket.png
 static=🍎 苹果服务, DIRECT, PROXY, ♻️ 故障切换, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Apple.png
 static=🤖 AI Platforms, PROXY, DIRECT, img-url=https://raw.githubusercontent.com/limbopro/Zure/master/AI%20Platforms.png
