@@ -23,7 +23,7 @@ address=/raw.githubusercontent.com/185.199.110.133
 
 [policy]
 static=🛑 广告拦截, REJECT, PROXY, DIRECT, img-url=https://raw.githubusercontent.com/limbopro/Qure/master/IconSet/Advertising.png
-available=♻️ 故障切换, 无用节点1, 无用节点2, img-url=https://raw.githubusercontent.com/limbopro/Zure/master/IconSet/Available.png
+available=♻️ 故障切换, img-url=https://raw.githubusercontent.com/limbopro/Zure/master/IconSet/Available.png
 static=✈️ 机场专线, PROXY, DIRECT, ♻️ 故障切换, img-url=https://raw.githubusercontent.com/limbopro/Zure/master/IconSet/rocket.png
 static=🍎 苹果服务, DIRECT, PROXY, ♻️ 故障切换, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Apple.png
 static=🤖 AI Platforms, PROXY, DIRECT, img-url=https://raw.githubusercontent.com/limbopro/Zure/master/AI%20Platforms.png
@@ -53,8 +53,7 @@ https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrit
 https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/Block/Advertising.conf, tag=DivineEngine (Advertising), enabled=true
 
 [server_local]
-shadowsocks=example.com:80, method=aes-128-gcm, password=pwd, obfs=ws, fast-open=false, tag=无用节点1
-shadowsocks=example.com:80, method=aes-128-gcm, password=pwd, obfs=ws, fast-open=false, tag=无用节点2
+
 
 [filter_local]
 geoip, cn, direct
